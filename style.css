@@ -47,7 +47,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.85);
+    background: transparent;
     color: white;
     border: 3px solid #333;
 }
@@ -59,16 +59,23 @@ body {
 .screen h1 {
     font-size: 72px;
     margin-bottom: 20px;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.9);
     letter-spacing: 4px;
     text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+    border-radius: 10px;
 }
 
 .screen p {
     font-size: 24px;
     margin: 10px 0;
-    color: #DDD;
+    color: #FFF;
     letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 .screen button {
@@ -84,6 +91,7 @@ body {
     letter-spacing: 2px;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .screen button:hover {
@@ -107,4 +115,55 @@ body {
 
 #score.hidden {
     display: none;
+}
+
+.difficulty-selector {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.difficulty-selector label {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #FFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
+
+.difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.difficulty-btn {
+    padding: 12px 30px;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.difficulty-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
+}
+
+.difficulty-btn.active {
+    background: #0066CC;
+    border-color: #004C99;
+    box-shadow: 0 0 20px rgba(0, 102, 204, 0.6);
+}
+
+.difficulty-btn.active:hover {
+    background: #0052A3;
 }

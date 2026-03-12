@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flappy Kiro</title>
+    <title>Flappy Manuel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="game-container">
         <canvas id="gameCanvas" width="1200" height="800"></canvas>
         <div id="menu" class="screen">
-            <h1>Flappy Kiro</h1>
+            <h1>Flappy Manuel</h1>
             <p>Press SPACEBAR to jump</p>
             <p>Press P or ESC to pause</p>
+            
+            <div class="difficulty-selector">
+                <label>Difficulty:</label>
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn active" data-difficulty="easy">Easy</button>
+                    <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                    <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+                </div>
+            </div>
+            
             <button id="playButton">Play</button>
         </div>
         <div id="gameOver" class="screen hidden">
