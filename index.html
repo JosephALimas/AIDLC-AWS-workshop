@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Kiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="1200" height="800"></canvas>
+        <div id="menu" class="screen">
+            <h1>Flappy Kiro</h1>
+            <p>Press SPACEBAR to jump</p>
+            <p>Press P or ESC to pause</p>
+            <button id="playButton">Play</button>
+        </div>
+        <div id="gameOver" class="screen hidden">
+            <h1>Game Over</h1>
+            <p id="finalScore">Score: 0</p>
+            <p id="highScore">High Score: 0</p>
+            <button id="restartButton">Restart</button>
+        </div>
+        <div id="pauseScreen" class="screen hidden">
+            <h1>Paused</h1>
+            <p>Press P or ESC to resume</p>
+        </div>
+        <div id="score" class="hidden">0</div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
